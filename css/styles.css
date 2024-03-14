@@ -92,16 +92,28 @@ body {
     text-transform: none;
     padding: 24px 0;
     display: flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }   
-   
+.current {
+    position: relative;
+    color: #404BBF;
+} 
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+}
  .page-nav .link:hover, 
  .page-nav .link:focus {
     color:#404bbf;
-    text-decoration: underline;
 }
 .page-nav .link:active {
     color: #404bbf;
-    text-decoration: underline;
 }
 .contact-address{
     font-style: normal;
@@ -117,6 +129,7 @@ body {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .contact-link:hover,
@@ -129,6 +142,7 @@ body {
     text-align: center;
     color: #fff;
     padding: 188px 0;
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg.jpg);
 }
 h1 {
     font-weight: 700;
@@ -148,6 +162,7 @@ button {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.04em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover, button:focus{
     background-color: #404bbf;
@@ -186,6 +201,19 @@ button:hover, button:focus{
 }
 .secondsect-item {
     width: calc((100% - 3 * 24px) / 4);
+}
+.secondsect-item svg {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.icons {
+    fill: transparent;
+    
+   
 }
 .plan-title {
     font-weight: 500;
@@ -226,6 +254,8 @@ button:hover, button:focus{
     background-color: #FFFFFF;
     width: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
 }
 .text-container {
     display: flex;
@@ -253,7 +283,27 @@ button:hover, button:focus{
     color: #434455;
     text-align: center;
 }
+ .social-link {
+    display: flex;
+    gap: 24px;
+ }
+ .social-link .link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
 
+.icons {
+    fill: #F4F4FD;
+}
+.social-link .link:hover, .social-link .link:focus {
+    background-color: aquamarine;
+}
 .foursect {
     font-weight: 700;
     font-size: 36px;
@@ -315,8 +365,6 @@ button:hover, button:focus{
 .page-footer {
     display: inline-block;
     padding: 100px 0;
-}
-.page-footer {
     background-color: #2e2f42;
     font-weight: 400;
     font-size: 16px;
@@ -324,6 +372,10 @@ button:hover, button:focus{
     letter-spacing: 0.02em;
     color: #f4f4fd;
     text-align: left;
+}
+.footer-container {
+    display: flex;
+    align-items: baseline;
 }
 .logo-footer {
     font-family: "Raleway", sans-serif;
@@ -337,10 +389,44 @@ button:hover, button:focus{
     margin-bottom: 16px;
 
 }
+.footer-container-logo {
+    margin-right:  120px;
+}
 .logo-footer .web-studio{
     color: #f4f4fd;
 }
 .page-footer-text {
     text-align: left;
     max-width: 264px;
+}
+.footer-social-media {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+.footer-social-link {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-link .link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons {
+    fill: #F4F4FD;
+}
+
+.footer-social-link .link:hover, .footer-social-link .link:focus {
+    background-color: aquamarine;
 }
