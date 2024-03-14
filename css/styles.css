@@ -368,6 +368,7 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: baground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-card:hover,
@@ -536,7 +537,7 @@ button:focus {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-icon .social-link {
+.social-link {
     width: 40px;
     height: 40px;
     background-color: #4D5AE5;
@@ -544,7 +545,7 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons {
