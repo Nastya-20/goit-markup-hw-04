@@ -333,6 +333,9 @@ button:focus {
     gap: 24px;
     justify-content: center;
 }
+.link {
+    transition: baground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .social-link .link {
     width: 40px;
@@ -522,7 +525,9 @@ button:focus {
     display: flex;
     gap: 16px;
 }
-
+.footer-social-icon {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .footer-social-icon .social-link {
     width: 40px;
     height: 40px;
